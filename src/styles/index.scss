@@ -1,0 +1,132 @@
+$body-light-color: #000;
+
+html {
+	height: 100%;
+}
+
+body {
+	color: $body-light-color;
+	margin: 0;
+	font-family: "Space Mono", monospace;
+	min-height: 100%;
+	#blog {
+		height: 100%;
+	}
+
+	.container {
+		display: flex;
+		height: 100vh;
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
+
+		.sidebar {
+			flex: 0 1 30%;
+			max-width: 30%;
+			padding: 0rem 5rem 0rem 5rem;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			@media screen and (max-width: 768px) {
+				flex: 1;
+				max-width: 100%;
+				padding: 3rem;
+			}
+
+			.logo {
+				img {
+					width: 90%;
+					border-radius: 20%;
+				}
+			}
+
+			.title {
+
+				p,
+				h2 {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+		section {
+		}
+
+		main {
+			width: 100%;
+			border-left: 1px solid rgba(0, 0, 0, 0.15);
+
+			.nav-content {
+				flex: 0 1 70%;
+				border: 1px solid rgba(0, 0, 0, 0.15);
+				border-left: none;
+				color: $body-light-color;
+
+				nav {
+					ul {
+						list-style: none;
+						font-size: 15px;
+						display: flex;
+						justify-content: space-around;
+
+						li {
+							a {
+								text-decoration: none;
+								padding-bottom: 13px;
+								border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+								color: $body-light-color;
+							}
+						}
+					}
+				}
+			}
+
+			.posts {
+				.post {
+					border-bottom: 1px solid #000;
+
+					&:not(:first-of-type) {
+						margin-top: 15px;
+					}
+
+					.post-heading {
+						a {
+							font-size: 1.5rem;
+							text-decoration: none;
+							color: $body-light-color;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+
+			.posts,
+			.published-post {
+				margin: 1rem;
+				.post-metadata {
+					display: flex;
+					align-items: center;
+					.publish-date, .reading-time {
+						display: flex;
+						align-items: center;
+						p {
+							margin: 0 0 0 15px;
+						}
+					}
+					.reading-time {
+						margin-left: 20px;
+					}
+				}
+				.post-body {
+					overflow: auto;
+					height: 100%;
+				}
+			}
+		}
+	}
+}

@@ -9,6 +9,7 @@ body {
 	margin: 0;
 	font-family: "Space Mono", monospace;
 	min-height: 100%;
+
 	#blog {
 		height: 100vh;
 	}
@@ -17,6 +18,7 @@ body {
 		display: flex;
 		height: 100%;
 		overflow: hidden;
+
 		@media screen and (max-width: 768px) {
 			flex-direction: column;
 		}
@@ -29,6 +31,7 @@ body {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+
 			@media screen and (max-width: 768px) {
 				flex: 1;
 				max-width: 100%;
@@ -89,12 +92,14 @@ body {
 			.posts {
 				overflow: auto;
 				height: 100%;
+
 				.post {
 					border-bottom: 1px solid #000;
 
 					&:not(:first-of-type) {
 						margin-top: 15px;
 					}
+
 					&:last-child {
 						margin-bottom: 5rem;
 					}
@@ -116,24 +121,56 @@ body {
 			.posts,
 			.published-post {
 				padding: 0.8rem;
+
 				.post-metadata {
 					display: flex;
 					align-items: center;
-					.publish-date, .reading-time {
+
+					.publish-date,
+					.reading-time {
 						display: flex;
 						align-items: center;
+
 						p {
 							margin: 0 0 0 15px;
 						}
 					}
+
 					.reading-time {
 						margin-left: 20px;
 					}
 				}
 			}
+
 			.published-post {
 				.post-body {
 					padding-bottom: 3rem;
+				}
+			}
+
+			.admin-login {
+				text-align: center;
+
+				button {
+					padding: 1rem 10rem;
+					margin-top: 10rem;
+					font-family: inherit;
+					font-size: 1rem;
+					background-color: rgba(0, 0, 0, 1);
+					color: #fff;
+					border: none;
+					cursor: pointer;
+
+					&:hover {
+						text-decoration: underline;
+						-webkit-transform: translate(0.25rem, -0.25rem);
+						-moz-transform: translate(0.25rem, -0.25rem);
+						-ms-transform: translate(0.25rem, -0.25rem);
+						-o-transform: translate(0.25rem, -0.25rem);
+						transform: translate(0.25rem, -0.25rem);
+						box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+						transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+					}
 				}
 			}
 		}

@@ -6,6 +6,8 @@ import Nav from './Components/Nav'
 import Sidebar from './Components/Sidebar'
 import Posts from './Components/Posts'
 import Post from './Components/Post'
+import AdminLoginButton  from './Components/AdminLoginButton'
+import AdminConsole from './Components/AdminConsole'
 import './styles/index.scss'
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
 				<Nav />
 				<Route exact path="/" component={Posts}/>
 				<Route exact path="/post/:id" component={Post} />
+				<Route exact path="/1234" component={AdminLoginButton} />
+				<Route exact path="/1234/admin" component={AdminConsole} />
 			</main>
 		</div>
 	)
